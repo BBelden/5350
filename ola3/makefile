@@ -1,0 +1,6 @@
+id3:	id3.cpp
+	g++ id3.cpp -o id3
+
+clean:
+	rm id3
+
