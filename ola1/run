@@ -1,0 +1,26 @@
+
+
+#declare count=0
+#declare h=3
+#declare g=2
+#while ((count<100)) ; do
+#    ./random_board $RANDOM 100 | ./a-star $h $g > solution$count.txt 
+#    let count+=1
+#done
+
+
+let count=0
+while ((count<100)) ; do
+    cat sol$count.txt | grep V  >> stats.txt
+    cat sol$count.txt | grep N  >> stats.txt
+    cat sol$count.txt | grep d  >> stats.txt
+    cat sol$count.txt | grep b  >> stats.txt
+    let count+=1
+done
+
+#declare sum=0
+#for i in $(cat v.txt); do
+#    let sum=$(($sum+$i))
+#done
+#echo "$sum" > v.txt
+
